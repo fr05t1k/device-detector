@@ -135,6 +135,7 @@ class DeviceDetectorTest extends TestCase
 
         // @todo remove me
         unset($fixtureData['client']['short_name']);
+        unset($fixtureData['os']['short_name']);
 
 
         AbstractDeviceParser::setVersionTruncation(AbstractDeviceParser::VERSION_TRUNCATION_NONE);
@@ -345,7 +346,6 @@ class DeviceDetectorTest extends TestCase
         $dd->parse();
         $expected = [
             'name'       => 'Windows',
-            'short_name' => 'WIN',
             'version'    => '7',
             'platform'   => 'x64',
         ];
