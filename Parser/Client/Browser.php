@@ -269,7 +269,7 @@ class Browser extends AbstractClientParser
         'Nokia Browser'      => ['Nokia Browser', 'Nokia OSS Browser', 'Nokia Ovi Browser', 'Dorado'],
         'Opera'              => [
             'Opera', 'Opera Mobile', 'Opera Mini', 'Opera Next', 'Opera Touch', 'Opera Neon', 'Opera Devices',
-            'Opera Mini iOS'
+            'Opera Mini iOS',
         ],
         'Safari'             => ['Safari', 'Mobile Safari', 'Sogou Mobile Browser'],
         'Sailfish Browser'   => ['Sailfish Browser'],
