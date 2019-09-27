@@ -256,11 +256,13 @@ class Browser extends AbstractClientParser
             'Chrome Frame', 'CoolNovo', 'Chromium', 'ChromePlus', 'Iron', 'RockMelt', 'Amigo', 'TweakStyle', 'Vivaldi',
             'Polarity', 'Avast Secure Browser', 'Tenta Browser', 'AOL Shield', 'Samsung Browser', 'Web Explorer',
             'Iron Mobile', 'Chrome Webview', 'Whale Browser', 'Seznam Browser', 'QtWebEngine', 'LieBaoFast', 'Kiwi',
-            '2345 Browser', 'CM Browser', 'Ecosia', 'Mint Browser', 'Mobile Silk', 'DuckDuckGo Privacy Browser', 'Mobile Silk', 'Hawk Turbo Browser', 'Oculus Browser',
+            '2345 Browser', 'CM Browser', 'Ecosia', 'Mint Browser', 'Mobile Silk', 'DuckDuckGo Privacy Browser',
+            'Mobile Silk', 'Hawk Turbo Browser', 'Oculus Browser',
         ],
         'Firefox'            => [
             'Firefox', 'Fennec', 'Firefox Mobile', 'Swiftfox', 'Firebird', 'Phoenix', 'MicroB', 'Epic', 'Waterfox',
-            'Cunaguaro', 'TenFourFox', 'Qwant Mobile', 'Firefox Rocket', 'IceCat', 'Mobicip', 'Firefox Mobile iOS', 'Basilisk',
+            'Cunaguaro', 'TenFourFox', 'Qwant Mobile', 'Firefox Rocket', 'IceCat', 'Mobicip', 'Firefox Mobile iOS',
+            'Basilisk',
         ],
         'Internet Explorer'  => ['Internet Explorer', 'IE Mobile', 'Microsoft Edge'],
         'Konqueror'          => ['Konqueror'],
@@ -370,7 +372,11 @@ class Browser extends AbstractClientParser
         }
 
         // This Exception should never be thrown. If so a defined browser name is missing in $availableBrowsers
-        throw new \Exception(sprintf('Detected browser name "%s" was not found in $availableBrowsers. Tried to parse user agent: %s', $name, $this->userAgent)); // @codeCoverageIgnore
+        throw new \Exception(sprintf(
+            'Detected browser name "%s" was not found in $availableBrowsers. Tried to parse user agent: %s',
+            $name,
+            $this->userAgent
+        )); // @codeCoverageIgnore
     }
 
     /**
